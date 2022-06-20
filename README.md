@@ -27,22 +27,18 @@ $ String that need to be in the .csv archive.
 
 ```
 
-O programa desenvolvido tem como objetivo encontrar a rota mais curta entre dois pontos no mapa, indicando ao usuário o caminho a ser percorrido, quais cidades deverão ser visitadas e qual a distância total do trajeto. Será necessário que o usuário informe o nome das cidades e o mapa deve ser exibido na tela.
-
-Será utilizado uma tabela CSV onde haverão três colunas, exemplo:
-
-| Cidade A                  | Cidade B                  | Distância (km) |
+| POINT A                  | POINT B                  | Distância (km) |
 | ------------------------- | ------------------------- | -------------- |
-| Florianópolis             | São José                  | 19             |
-| Florianópolis             | Biguaçu                   | 24             |
-| São José                  | Biguaçu                   | 20             |
-| São José                  | Palhoça                   | 6              |
-| São José                  | São Pedro de Alcântara    | 22             |
-| Biguaçu                   | Antônio Carlos            | 17             |
-| São Pedro de Alcântara    | Antônio Carlos            | 10             |
-| São Pedro de Alcântara    | Angelina                  | 28             |
-| Palhoça                   | Santo Amaro da Imperatriz | 16             |
-| Palhoça                   | Paulo Lopes               | 40             |
+| A             | A               | 19             |
+| B            | A                   | 24             |
+| C                | A                   | 20             |
+| A                 | C                   | 6              |
+| D                 | B    | 22             |
+| B                   | D            | 17             |
+| C   | D | 10             |
+| D    | C                  | 28             |
+| B                | C | 16             |
+| C                   | B               | 40             |
 | Santo Amaro da Imperatriz | Rancho Queimado           | 31             |
 | Angelina                  | Rancho Queimado           | 15             |
 | Paulo Lopes               | Garopaba                  | 17             |
