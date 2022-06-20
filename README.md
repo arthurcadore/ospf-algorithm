@@ -1,19 +1,31 @@
-# Descobrindo Rotas em um Mapa
+# OSFP Algorithm for find de shortest way between two points. 
 
-## Compilação
+## To compile this code: 
 
 ```bash
-# 1º - Gerar Makefile para compilação do projeto
+# 1º - Generate Makefile: 
 $ cmake CMakeLists.txt
 
-# 2º - Compilar Projeto
-$ make
-
-# 3º - Executar Projeto
+# 2º - Compile and run the project: 
 $ make run
 ```
 
-## Objetivo
+#PS: For compilation with make, cmake (version 3.17) should will be installed on your application. 
+
+## Functional description: 
+
+The program interfaces needs 3 itens to operate: 
+
+```bash
+# 1º - .csv archive that contains all routes. 
+
+# 2º - Value of the destination point
+$ String that need to be in the .csv archive. 
+
+# 3º - Value of the source point
+$ String that need to be in the .csv archive. 
+
+```
 
 O programa desenvolvido tem como objetivo encontrar a rota mais curta entre dois pontos no mapa, indicando ao usuário o caminho a ser percorrido, quais cidades deverão ser visitadas e qual a distância total do trajeto. Será necessário que o usuário informe o nome das cidades e o mapa deve ser exibido na tela.
 
