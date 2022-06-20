@@ -1,0 +1,209 @@
+Município 1,Município 2,Distância (km)
+Agrolândia,Ituporanga,27
+Agrolândia,Rio do Sul,33
+Alfredo Wagner,Bom Retiro,24
+Alfredo Wagner,Ituporanga,56
+Alfredo Wagner,Leoberto Leal,31
+Alfredo Wagner,Rancho Queimado,47
+Angelina,Major Gercino,27
+Angelina,Rancho Queimado,15
+Angelina,São Pedro de Alcântara,28
+Anitápolis,Rancho Queimado,36
+Anitápolis,Rio Fortuna,41
+Antônio Carlos,Biguaçu,17
+Antônio Carlos,São Pedro de Alcântara,10
+Balneário Camboriú,Brusque,41
+Balneário Camboriú,Itajaí,14
+Balneário Camboriú,Itapema,14
+Balneário Rincão,Içara,18
+Biguaçu,Antônio Carlos,17
+Biguaçu,Florianópolis,24
+Biguaçu,Gov. Celso Ramos,29
+Biguaçu,São José,20
+Biguaçu,Tijucas,31
+Blumenau,Gaspar,16
+Blumenau,Ibirama,76
+Bocaina do Sul,Bom Retiro,53
+Bocaina do Sul,Lages,41
+Bocaina do Sul,Rio Rufino,30
+Bom Jardim da Serra,Lauro Muller,34
+Bom Jardim da Serra,São Joaquim,43
+Bom Jardim da Serra,Urubici,73
+Bom Retiro,Alfredo Wagner,24
+Bom Retiro,Bocaina do Sul,53
+Bom Retiro,Rio Rufino,53
+Bom Retiro,Urubici,36
+Bombinhas,Tijucas,23
+Braço do Norte,Gravatal,13
+Braço do Norte,Rio Fortuna,23
+Braço do Norte,Urubici,71
+Brusque,Balneário Camboriú,41
+Brusque,Gaspar,27
+Brusque,Itajaí,35
+Brusque,São João Batista,27
+Brusque,Vidal Ramos,76
+Canelinha,São João Batista,10
+Canelinha,Tijucas,15
+Cocal do Sul,Criciúma,11
+Cocal do Sul,Morro da Fumaça,18
+Cocal do Sul,Siderópolis,11
+Cocal do Sul,Urussanga,10
+Criciúma,Cocal do Sul,11
+Criciúma,Içara,10
+Criciúma,Morro da Fumaça,18
+Criciúma,Siderópolis,13
+Florianópolis,Biguaçu,24
+Florianópolis,São José,19
+Garopaba,Imbituba,29
+Garopaba,Paulo Lopes,17
+Gaspar,Blumenau,16
+Gaspar,Brusque,27
+Gaspar,Itajaí,38
+Gov. Celso Ramos,Biguaçu,29
+Gov. Celso Ramos,Tijucas,31
+Gravatal,Braço do Norte,13
+Gravatal,Orleans,32
+Gravatal,São Martinho,38
+Gravatal,Tubarão,24
+Ibirama,Blumenau,76
+Ibirama,Lontras,16
+Imaruí,Imbituba,27
+Imaruí,São Martinho,39
+Imbituba,Garopaba,29
+Imbituba,Imaruí,27
+Imbituba,Laguna,34
+Imbituba,Paulo Lopes,34
+Itajaí,Balneário Camboriú,14
+Itajaí,Brusque,35
+Itajaí,Gaspar,38
+Itajaí,Navegantes,4
+Itapema,Balneário Camboriú,14
+Itapema,Tijucas,17
+Ituporanga,Agrolândia,27
+Ituporanga,Alfredo Wagner,56
+Ituporanga,Leoberto Leal,47
+Ituporanga,Rio do Sul,26
+Ituporanga,Vidal Ramos,32
+Içara,Balneário Rincão,18
+Içara,Criciúma,10
+Içara,Jaguaruna,34
+Içara,Morro da Fumaça,16
+Jaguaruna,Içara,34
+Jaguaruna,Laguna,39
+Jaguaruna,Sangão,14
+Jaguaruna,Tubarão,21
+Lages,Bocaina do Sul,41
+Lages,Otacílio Costa,49
+Lages,Painel,28
+Laguna,Imbituba,34
+Laguna,Jaguaruna,39
+Laguna,Tubarão,28
+Lauro Muller,Bom Jardim da Serra,34
+Lauro Muller,Orleans,13
+Lauro Muller,Treviso,19
+Leoberto Leal,Alfredo Wagner,31
+Leoberto Leal,Ituporanga,47
+Leoberto Leal,Major Gercino,51
+Leoberto Leal,Vidal Ramos,23
+Lontras,Ibirama,16
+Lontras,Rio do Sul,13
+Lontras,Vidal Ramos,51
+Major Gercino,Angelina,27
+Major Gercino,Leoberto Leal,51
+Major Gercino,São João Batista,26
+Morro da Fumaça,Cocal do Sul,18
+Morro da Fumaça,Criciúma,18
+Morro da Fumaça,Içara,16
+Morro da Fumaça,Sangão,9
+Morro da Fumaça,Urussanga,20
+Navegantes,Itajaí,4
+Nova Trento,São João Batista,8
+Orleans,Gravatal,32
+Orleans,Lauro Muller,13
+Orleans,Tubarão,44
+Orleans,Urussanga,21
+Otacílio Costa,Lages,49
+Otacílio Costa,Rio do Sul,74
+Painel,Lages,28
+Painel,São Joaquim,52
+Painel,Urupema,26
+Palhoça,Paulo Lopes,40
+Palhoça,Santo Amaro da Imperatriz,16
+Palhoça,São José,6
+Paulo Lopes,Garopaba,17
+Paulo Lopes,Imbituba,34
+Paulo Lopes,Palhoça,40
+Porto Belo,Tijucas,12
+Rancho Queimado,Alfredo Wagner,47
+Rancho Queimado,Angelina,15
+Rancho Queimado,Anitápolis,36
+Rancho Queimado,Santo Amaro da Imperatriz,31
+Rio do Sul,Ituporanga,26
+Rio Fortuna,Anitápolis,41
+Rio Fortuna,Braço do Norte,23
+Rio Fortuna,São Bonifácio,47
+Rio Fortuna,São Martinho,16
+Rio Rufino,Bocaina do Sul,30
+Rio Rufino,Bom Retiro,53
+Rio Rufino,Urubici,33
+Rio Rufino,Urupema,19
+Rio do Sul,Agrolândia,33
+Rio do Sul,Lontras,13
+Rio do Sul,Otacílio Costa,74
+Sangão,Jaguaruna,14
+Sangão,Morro da Fumaça,9
+Santo Amaro da Imperatriz,Palhoça,16
+Santo Amaro da Imperatriz,Rancho Queimado,31
+Santo Amaro da Imperatriz,São Bonifácio,47
+Siderópolis,Cocal do Sul,11
+Siderópolis,Criciúma,13
+Siderópolis,Treviso,13
+Siderópolis,Urussanga,17
+São Bonifácio,Rio Fortuna,47
+São Bonifácio,Santo Amaro da Imperatriz,47
+São Bonifácio,São Martinho,42
+São Joaquim,Bom Jardim da Serra,43
+São Joaquim,Painel,52
+São Joaquim,Urubici,61
+São José,Biguaçu,20
+São José,Florianópolis,19
+São José,Palhoça,6
+São José,São Pedro de Alcântara,22
+São João Batista,Brusque,27
+São João Batista,Canelinha,10
+São João Batista,Major Gercino,26
+São João Batista,Nova Trento,8
+São Martinho,Imaruí,39
+São Martinho,Rio Fortuna,16
+São Martinho,São Bonifácio,42
+São Martinho,Gravatal,38
+São Pedro de Alcântara,Angelina,28
+São Pedro de Alcântara,Antônio Carlos,10
+São Pedro de Alcântara,São José,22
+Tijucas,Biguaçu,31
+Tijucas,Bombinhas,23
+Tijucas,Canelinha,15
+Tijucas,Gov. Celso Ramos,31
+Tijucas,Itapema,17
+Tijucas,Porto Belo,12
+Treviso,Lauro Muller,19
+Treviso,Siderópolis,13
+Tubarão,Gravatal,24
+Tubarão,Jaguaruna,21
+Tubarão,Laguna,28
+Tubarão,Orleans,44
+Urubici,Bom Jardim da Serra,73
+Urubici,Bom Retiro,36
+Urubici,Braço do Norte,71
+Urubici,Rio Rufino,33
+Urubici,São Joaquim,61
+Urupema,Painel,26
+Urupema,Rio Rufino,19
+Urussanga,Cocal do Sul,10
+Urussanga,Morro da Fumaça,20
+Urussanga,Orleans,21
+Urussanga,Siderópolis,17
+Vidal Ramos,Brusque,76
+Vidal Ramos,Ituporanga,32
+Vidal Ramos,Leoberto Leal,23
+Vidal Ramos,Lontras,51
