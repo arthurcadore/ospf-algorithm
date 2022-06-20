@@ -28,22 +28,70 @@ $ String that need to be in the .csv archive.
 $ String that need to be in the .csv archive. 
 
 ```
-
+<table align="center">
 | POINT A                  | POINT B                  | Distance Cost |
 | ------------------------- | ------------------------- | -------------- |
-| A | B | 2 |
-| A | C | 1 |
-| B | A | 2 |
-| B | C | 3 |
-| B | D | 4 |
-| C | A | 1 |
-| C | B | 3 |
-| C | D | 1 |
-| D | C | 1 |
-| D | B | 4 |
+  <tr>
+    <th> POINT A</th>
+    <th>POINT B</th>
+    <th>Distance Cost</th>
+  </tr>
+  <tr>
+    <th>A</th>
+    <th>B</th>
+    <th>2</th>
+  </tr>
+  <tr>
+    <th>A</th>
+    <th>C</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>B</th>
+    <th>A</th>
+    <th>2</th>
+  </tr>
+  <tr>
+    <th>B</th>
+    <th>C</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <th>B</th>
+    <th>D</th>
+    <th>4</th>
+  </tr>
+  <tr>
+    <th>C</th>
+    <th>A</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>C</th>
+    <th>B</th>
+    <th>3</th>
+  </tr>
+  <tr>
+    <th>C</th>
+    <th>D</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>D</th>
+    <th>C</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>D</th>
+    <th>B</th>
+    <th>4</th>
+  </tr>
+</table>
 
-## Here is an represantation of the route table: 
+<p align="center">Here is an represantation of the router table: </p>
 
-![alt text](https://github.com/arthurcadore/ospf_algorithm_cpp/blob/main/map_diagram.png)
+<p align="center">
+<img src="https://github.com/arthurcadore/ospf_algorithm_cpp/blob/main/map_diagram.png">
+</p>
 
----
+
