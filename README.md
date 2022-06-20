@@ -29,8 +29,6 @@ $ String that need to be in the .csv archive.
 
 ```
 <table align="center">
-| POINT A                  | POINT B                  | Distance Cost |
-| ------------------------- | ------------------------- | -------------- |
   <tr>
     <th> POINT A</th>
     <th>POINT B</th>
