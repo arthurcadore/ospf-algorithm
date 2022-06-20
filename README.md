@@ -1,4 +1,6 @@
-# OSFP Algorithm for find de shortest way between two points. 
+# OSFP Algorithm c++ code. 
+
+##Objective: Find de shortest way between two points. 
 
 ## To compile this code: 
 
@@ -40,6 +42,8 @@ $ String that need to be in the .csv archive.
 | D | C | 1 |
 | D | B | 4 |
 
+## Here is an represantation of the route table: 
 
+![alt text](https://github.com/arthurcadore/ospf_algorithm_cpp/blob/main/map_diagram.png)
 
 ---
