@@ -27,26 +27,19 @@ $ String that need to be in the .csv archive.
 
 ```
 
-| POINT A                  | POINT B                  | Distância (km) |
+| POINT A                  | POINT B                  | Distance Cost |
 | ------------------------- | ------------------------- | -------------- |
-| A             | A               | 19             |
-| B            | A                   | 24             |
-| C                | A                   | 20             |
-| A                 | C                   | 6              |
-| D                 | B    | 22             |
-| B                   | D            | 17             |
-| C   | D | 10             |
-| D    | C                  | 28             |
-| B                | C | 16             |
-| C                   | B               | 40             |
-| Santo Amaro da Imperatriz | Rancho Queimado           | 31             |
-| Angelina                  | Rancho Queimado           | 15             |
-| Paulo Lopes               | Garopaba                  | 17             |
-| Santo Amaro da Imperatriz | São Bonifácio             | 47             |
-| São Bonifácio             | Garopaba                  | 118            |
+| A | B | 2 |
+| A | C | 1 |
+| B | A | 2 |
+| B | C | 3 |
+| B | D | 4 |
+| C | A | 1 |
+| C | B | 3 |
+| C | D | 1 |
+| D | C | 1 |
+| D | B | 4 |
 
-A partir destes dados informados deveremos disponibilizar esta informação ao usuário para que ele possa escolher de qual a qual cidade ele deseja saber a rota mais curta.
+
 
 ---
-
-##### Autores: Arthur Cadore Matuella Barcella, Gabriel Luiz Espindola Pedro, Matheus Pires Salazar
