@@ -8,6 +8,7 @@
 
 #include "dijkstra.h"
 #include "parse_csv.h"
+#include "router_remover.h"
 #include "types.h"
 
 using std::cin;

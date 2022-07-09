@@ -4,7 +4,7 @@ project(route_finder)
 set(CMAKE_CXX_STANDARD 11)
 include_directories(.)
 
-add_executable(route_finder source/main.cpp source/dijkstra.cpp source/parse_csv.cpp)
+add_executable(route_finder source/main.cpp source/dijkstra.cpp source/parse_csv.cpp source/router_remover.h source/router_remover.cpp)
 
 add_custom_target(run
     COMMAND route_finder
