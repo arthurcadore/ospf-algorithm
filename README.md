@@ -1,6 +1,9 @@
-# OSFP Algorithm c++ code. 
+# OSFP Algorithm
 
-##Objective: Find de shortest way between two points. 
+### Author: Arthur Cadore M. Barcella
+#### Telecom Eng. Student
+
+
 
 ## To compile this code: 
 
