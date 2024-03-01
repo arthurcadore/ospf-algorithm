@@ -1,4 +1,4 @@
-# OSFP Protocol - SPF Algorithm (Dijkstra)
+# OSFP Protocol Algorithm Repository Demonstration:
 
 This repository contains a C++ implementation of the OSPF (Open Shortest Path First) routing protocol, using the SPF (Shortest Path First) algorithm, also known as Dijkstra's algorithm. OSPF is a dynamic routing protocol widely used in large-scale networks to calculate the shortest path for routing packets.
 
