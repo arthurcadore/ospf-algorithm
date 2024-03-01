@@ -1,35 +1,39 @@
-# OSFP Algorithm
+# OSFP Protocol - SPF Algorithm (Dijkstra)
 
-### Author: Arthur Cadore M. Barcella
-#### Telecom Eng. Student
+This repository contains a C++ implementation of the OSPF (Open Shortest Path First) routing protocol, using the SPF (Shortest Path First) algorithm, also known as Dijkstra's algorithm. OSPF is a dynamic routing protocol widely used in large-scale networks to calculate the shortest path for routing packets.
 
+---
+Prerequisites, before you begin, ensure you have the following packages installed on your system:
 
+- Git version 2.34.1
+- cmake (version 3.17)
 
-## To compile this code: 
+### Getting Started:
 
-```bash
-# 1º - Generate Makefile: 
-$ cmake CMakeLists.txt
+First, copy the line below and paste on your prompt to clone the repository:
 
-# 2º - Compile and run the project: 
-$ make run
+```
+git clone https://github.com/arthurcadore/ospf-algorithm
 ```
 
-#PS: For compilation with make, cmake (version 3.17) should will be installed on your application. 
+Navigate to the project directory:
+```
+cd ./ospf-algorithm
+```
 
-## Functional description: 
+## Code compilation: 
 
-The program interfaces needs 3 itens to operate: 
+In sequence, compile de C++ codes, and execute the application by the commands below: 
 
-```bash
-# 1º - .csv archive that contains all routes. 
+```
+cmake CMakeLists.txt
 
-# 2º - Value of the destination point
-$ String that need to be in the .csv archive. 
+make run
+```
 
-# 3º - Value of the source point
-$ String that need to be in the .csv archive. 
+## Algorithm description: 
 
+The algorithm application needs an database file (by default is `cities.csv`), with the following structure to operate correctely: 
 ```
 <table align="center">
   <tr>
