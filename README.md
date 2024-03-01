@@ -96,6 +96,29 @@ cmake CMakeLists.txt
 make run
 ```
 
-## 
+## Using the application: 
+
+After the application is running, you will be prompted to enter the destination and source city names. The application will calculate the shortest path and the second shortest path between the two cities, and display the results, as shown below:
+
+```
+@arthurcadore ➜ /ospfAlgorithm (main) $ make run
+[100%] Built target route_finder
+
+
+---------------------Algoritmo de Dijkstra---------------------
+
+Digite o nome da cidade de destino: Florianópolis
+Digite o nome da cidade de origem: Agrolândia
+
+Menor caminho para chegar em Florianópolis partindo de Agrolândia: 
+Agrolândia -> Ituporanga -> Alfredo Wagner -> Rancho Queimado -> Santo Amaro da Imperatriz -> Palhoça -> São José -> Florianópolis 
+Distância total: 202km
+
+Segundo menor caminho para chegar em Florianópolis partindo de Agrolândia: 
+Agrolândia -> Ituporanga -> Leoberto Leal -> Major Gercino -> Angelina -> São Pedro de Alcântara -> São José -> Florianópolis 
+Distância total: 221km
+ 
+```
+
 
 
