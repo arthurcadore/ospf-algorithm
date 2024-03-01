@@ -41,36 +41,6 @@ The database (.csv) file needs the following structure to operate correctely:
     <th>C</th>
     <th>3</th>
   </tr>
-  <tr>
-    <th>B</th>
-    <th>D</th>
-    <th>4</th>
-  </tr>
-  <tr>
-    <th>C</th>
-    <th>A</th>
-    <th>1</th>
-  </tr>
-  <tr>
-    <th>C</th>
-    <th>B</th>
-    <th>3</th>
-  </tr>
-  <tr>
-    <th>C</th>
-    <th>D</th>
-    <th>1</th>
-  </tr>
-  <tr>
-    <th>D</th>
-    <th>C</th>
-    <th>1</th>
-  </tr>
-  <tr>
-    <th>D</th>
-    <th>B</th>
-    <th>4</th>
-  </tr>
 </table>
 
 ### Getting Started:
