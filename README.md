@@ -75,18 +75,18 @@ After the application is running, you will be prompted to enter the destination 
 [100%] Built target route_finder
 
 
----------------------Algoritmo de Dijkstra---------------------
+---------------------Dijkstra's Algorithm---------------------
 
-Digite o nome da cidade de destino: Florianópolis
-Digite o nome da cidade de origem: Agrolândia
+Enter the name of the destination city: Florianópolis
+Enter the name of the starting city: Rio do Sul
 
-Menor caminho para chegar em Florianópolis partindo de Agrolândia: 
-Agrolândia -> Ituporanga -> Alfredo Wagner -> Rancho Queimado -> Santo Amaro da Imperatriz -> Palhoça -> São José -> Florianópolis 
-Distância total: 202km
+Shortest path to reach Florianópolis from Rio do Sul: 
+Rio do Sul -> Ituporanga -> Alfredo Wagner -> Rancho Queimado -> Santo Amaro da Imperatriz -> Palhoça -> São José -> Florianópolis 
+Total distance: 201km
 
-Segundo menor caminho para chegar em Florianópolis partindo de Agrolândia: 
-Agrolândia -> Ituporanga -> Leoberto Leal -> Major Gercino -> Angelina -> São Pedro de Alcântara -> São José -> Florianópolis 
-Distância total: 221km
+Second shortest path to reach Florianópolis from Rio do Sul: 
+Rio do Sul -> Ituporanga -> Leoberto Leal -> Major Gercino -> Angelina -> São Pedro de Alcântara -> São José -> Florianópolis 
+Total distance: 220km
  
 ```
 
