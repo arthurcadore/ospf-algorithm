@@ -3,42 +3,22 @@
 This repository contains a C++ implementation of the OSPF (Open Shortest Path First) routing protocol, using the SPF (Shortest Path First) algorithm, also known as Dijkstra's algorithm. OSPF is a dynamic routing protocol widely used in large-scale networks to calculate the shortest path for routing packets.
 
 ---
-Prerequisites, before you begin, ensure you have the following packages installed on your system:
+### Prerequisites, before you begin, ensure you have the following packages installed on your system:
 
 - Git version 2.34.1
 - cmake (version 3.17)
 
-### Getting Started:
 
-First, copy the line below and paste on your prompt to clone the repository:
+### Algorithm description: 
 
-```
-git clone https://github.com/arthurcadore/ospf-algorithm
-```
+Before starts the algorithm application, make shure you have an database file (by default is `cities.csv`), to feed the algorithm and allow it to calculate de OSPF. 
 
-Navigate to the project directory:
-```
-cd ./ospf-algorithm
-```
+The database (.csv) file needs the following structure to operate correctely: 
 
-## Code compilation: 
-
-In sequence, compile de C++ codes, and execute the application by the commands below: 
-
-```
-cmake CMakeLists.txt
-
-make run
-```
-
-## Algorithm description: 
-
-The algorithm application needs an database file (by default is `cities.csv`), with the following structure to operate correctely: 
-```
 <table align="center">
   <tr>
-    <th> POINT A</th>
-    <th>POINT B</th>
+    <th>Source</th>
+    <th>Destination</th>
     <th>Distance Cost</th>
   </tr>
   <tr>
@@ -93,10 +73,29 @@ The algorithm application needs an database file (by default is `cities.csv`), w
   </tr>
 </table>
 
-<p align="center">Here is an represantation of the router table: </p>
+### Getting Started:
 
-<p align="center">
-<img src="https://github.com/arthurcadore/ospf_algorithm_cpp/blob/main/map_diagram.png">
-</p>
+First, copy the line below and paste on your prompt to clone the repository:
+
+```
+git clone https://github.com/arthurcadore/ospf-algorithm
+```
+
+Navigate to the project directory:
+```
+cd ./ospf-algorithm
+```
+
+## Code compilation: 
+
+In sequence, compile de C++ codes, and execute the application by the commands below: 
+
+```
+cmake CMakeLists.txt
+
+make run
+```
+
+## 
 
 
