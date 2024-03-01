@@ -3,120 +3,113 @@
 int main(int argc, char const *argv[]) {
   cout << endl
        << endl
-       << "---------------------Algoritmo de Dijkstra---------------------"
+       << "---------------------Dijkstra's Algorithm---------------------"
        << endl
        << endl;
 
-  // Hashtable que armazena as cidades do mapa, as cidades vizinhas e a
-  // distância entre elas.
+  // Hashtable that stores the cities in the map, the neighboring cities, and the
+  // distance between them.
   unordered_map<string, list<Neighbor>> map;
-  // Lista com todas as cidades do mapa.
+  // List with all cities in the map.
   list<string> cities;
   list<string> cities_to_remove;
 
   try {
-    // Lê o arquivo CSV e armazena os dados em map e cities.
+    // Read the CSV file and store the data in map and cities.
     parse_csv(map, cities);
   } catch (...) {
-    // Em caso de erro na leitura do arquivo, o programa é encerrado.
-    cout << "Erro ao abrir o arquivo csv" << endl;
+    // In case of an error reading the file, the program is terminated.
+    cout << "Error opening the csv file" << endl;
     return 1;
   }
 
-  // Variáveis de input de usuário.
+  // User input variables.
   string destination;
   string starting_point;
   while (true) {
-    // Pede ao usuário que insira uma cidade do mapa como destino.
+    // Ask the user to input a city from the map as the destination.
     do {
-      cout << "Digite o nome da cidade de destino: ";
+      cout << "Enter the name of the destination city: ";
       getline(cin, destination);
     } while (map.find(destination) == map.end());
 
-    // Pede ao usuário que insira uma cidade do mapa como origem.
+    // Ask the user to input a city from the map as the starting point.
     do {
-      cout << "Digite o nome da cidade de origem: ";
+      cout << "Enter the name of the starting city: ";
       getline(cin, starting_point);
     } while (map.find(starting_point) == map.end());
 
-    // Tabela de distâncias e caminhos utilizadas pelo algoritmo.
+    // Distance and path table used by the algorithm.
     unordered_map<string, Table_Line> distance_table;
     dijkstra(map, cities, destination, distance_table);
 
-    // Exibe ao usuário o menor caminho entre origem e destino e informa
-    // distância.
+    // Display to the user the shortest path between origin and destination and
+    // inform distance.
     string current_city = starting_point;
-    // Cria string de caminho que será exibida ao usuário
+    // Create path string that will be displayed to the user.
     string path = "";
 
     cout << endl;
-    cout << "Menor caminho para chegar em " << destination << " partindo de "
-         << starting_point << ": " << endl;
+    cout << "Shortest path to reach " << destination << " from " << starting_point << ": " << endl;
 
-    // Itera sobre a tabela de distâncias e caminhos para criar a string
-    // caminho.
+    // Iterate over the distance and path table to create the path string.
     while (current_city != "") {
       path += current_city + " -> ";
 
       current_city = distance_table[current_city].next_city;
 
-      // Verifica se a cidade não corresponde a de origem ou destino e  então a
-      // adiciona na lista.
+      // Check if the city is not the starting point or the destination and then add
+      // it to the list.
       if (current_city != starting_point && current_city != destination) {
-        // Adiciona as cidades intermediárias a lista  para eliminar rotas.
+        // Add intermediate cities to the list to remove routes.
         cities_to_remove.push_back(current_city);
       }
     }
 
-    // Como a formatação do código inicial inclui uma string vazia no final da
-    // lista, é utilizado um pop_back para retira-la.
-
+    // As the initial code formatting includes an empty string at the end of the list,
+    // pop_back is used to remove it.
     cities_to_remove.pop_back();
 
-    // elimina os 3 caracteres sobressalentes do loop de impressão.
+    // Remove the extra 3 characters from the printing loop.
     path.erase(path.length() - 3);
 
-    // imprime a distância total percorrida pela rota.
+    // Print the total distance traveled by the route.
     cout << path << endl;
-    cout << "Distância total: " << distance_table[starting_point].total_distance
-         << "km" << endl;
+    cout << "Total distance: " << distance_table[starting_point].total_distance << "km" << endl;
 
-    // chama a função de remoção de rota.
+    // Call the route removal function.
     route_remover(map, cities_to_remove, distance_table);
 
-    // limpa a tabela que contem as rotas da primeira chamada do algoritimo.
+    // Clear the table containing the routes from the first call of the algorithm.
     distance_table.clear();
 
-    // chama novamente o algorimito, desta vez com as rotas já removidas.
+    // Call the algorithm again, this time with the routes already removed.
     dijkstra(map, cities, destination, distance_table);
 
-    // Exibe ao usuário o menor caminho entre origem e destino e informa
-    // distância.
+    // Display to the user the second shortest path between origin and destination
+    // and inform distance.
     cout << endl;
-    cout << "Segundo menor caminho para chegar em " << destination
-         << " partindo de " << starting_point << ": " << endl;
+    cout << "Second shortest path to reach " << destination << " from " << starting_point << ": " << endl;
 
     current_city = starting_point;
-    // Cria string de caminho que será exibida ao usuário
+    // Create path string that will be displayed to the user.
     path = "";
-    // Itera sobre a tabela de distâncias e caminhos para criar a string
-    // caminho.
+    // Iterate over the distance and path table to create the path string.
     while (current_city != "") {
       path += current_city + " -> ";
 
       current_city = distance_table[current_city].next_city;
     }
 
-    // Remove " -> " do final da string.
+    // Remove " -> " from the end of the string.
     path.erase(path.length() - 3);
 
     cout << path << endl;
-    cout << "Distância total: " << distance_table[starting_point].total_distance
-         << "km" << endl;
+    cout << "Total distance: " << distance_table[starting_point].total_distance << "km" << endl;
 
     cout << endl
          << endl
-         << "---------------------Algoritmo de Dijkstra---------------------"
+         << "---------------------Dijkstra's Algorithm---------------------"
          << endl
          << endl;
   }

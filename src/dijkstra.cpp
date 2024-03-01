@@ -3,21 +3,20 @@
 void dijkstra(unordered_map<string, list<Neighbor>>& map, list<string>& cities,
               string& destination,
               unordered_map<string, Table_Line>& distance_table) {
-  // Passo 1: Cria a tabela distance_table, de forma que,
-  // para cada cidade do mapa: distance_table[cidade] = (MAX_INT, next_city)
-  // Observação: D[destination] = (0,destination)
+  // Step 1: Create the distance_table, so that for each city in the map:
+  // distance_table[city] = (MAX_INT, next_city)
+  // Note: D[destination] = (0, destination)
   for (auto city : cities) {
     distance_table[city] = Table_Line{"", INT_MAX};
   }
   distance_table[destination] = Table_Line{"", 0};
 
-  // Passo 2: Cria Q, que é uma lista contendo todos os nodos (incluindo nodoA)
+  // Step 2: Create Q, which is a list containing all nodes (including nodeA)
   list<string> Q = cities;
 
-  // Passo 3: Enquanto Q não estivar vazio:
+  // Step 3: While Q is not empty:
   while (!Q.empty()) {
-    // Passo 3.1: Extraia de Q o nodo u, que é o nodo com menor distância até
-    // nodoA
+    // Step 3.1: Extract from Q the node u, which is the node with the shortest distance to nodeA
     string u;
     int min_distance = INT_MAX;
     for (auto city : Q) {
@@ -27,10 +26,10 @@ void dijkstra(unordered_map<string, list<Neighbor>>& map, list<string>& cities,
       }
     }
 
-    // Passo 3.2: Para cada nodo v vizinho de u:
-    //   Calcule a distância do nodo v: dist_v = dist_u + distancia(u,v)
-    //   Se dist_v for menor do que a distância contida em D[v], faça isto:
-    //     Atualize D[v] = (dist_v, u)
+    // Step 3.2: For each neighbor node v of u:
+    // Calculate the distance to node v: dist_v = dist_u + distance(u, v)
+    // If dist_v is less than the distance contained in D[v], do this:
+    // Update D[v] = (dist_v, u)
     for (auto neighbor : map[u]) {
       string v = neighbor.name;
       int dist_v = min_distance + neighbor.distance;
@@ -39,7 +38,7 @@ void dijkstra(unordered_map<string, list<Neighbor>>& map, list<string>& cities,
       }
     }
 
-    // Passo 3.3: Remova u de Q
+    // Step 3.3: Remove u from Q
     Q.remove(u);
   }
 }

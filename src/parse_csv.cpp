@@ -2,19 +2,19 @@
 
 void parse_csv(unordered_map<string, list<Neighbor>>& map,
                list<string>& cities) {
-  // Abre arquivo CSV
+  // Open CSV file
   ifstream csv("cities.csv");
 
   if (!csv.is_open()) {
-    // Caso haja erro ao abrir o arquivo, retorna exeção.
-    throw "Erro ao abrir o arquivo csv";
+    // If there is an error opening the file, throw an exception.
+    throw "Error opening the csv file";
   }
 
   string line;
-  // Discarta primeira linha (cabeçalho).
+  // Discard first line (header).
   getline(csv, line);
 
-  // Para cada linha joga informações para map e cities.
+  // For each line, extract information and store it in map and cities.
   while (getline(csv, line)) {
     if (!line.empty()) {
       stringstream ss(line);
@@ -22,28 +22,27 @@ void parse_csv(unordered_map<string, list<Neighbor>>& map,
       string city_b;
       int distance;
 
-      // Lê cidade A, cidade B e distância, e insere em suas respectivas
-      // variáveis.
+      // Read city A, city B, and distance, and insert into their respective variables.
       getline(ss, city_a, ',');
       getline(ss, city_b, ',');
       ss >> distance;
 
-      // Adiciona cidade à lista de cidades.
+      // Add city to the list of cities.
       cities.push_back(city_a);
 
-      // Adiciona cidade vizinha à lista de vizinhos da cidade A.
+      // Add neighboring city to the list of neighbors of city A.
       if (map.find(city_a) == map.end()) {
-        // Caso não haja cidade A na hashtable de vizinhos, inicializa.
+        // If city A is not in the neighbors hashtable, initialize it.
         list<Neighbor> new_list = {Neighbor{city_b, distance}};
 
         map[city_a] = new_list;
       } else {
-        // Caso haja adiciona a cidade B à lista de vizinhos da cidade A.
+        // If it is, add city B to the list of neighbors of city A.
         map[city_a].push_back({Neighbor{city_b, distance}});
       }
     }
   }
 
-  // Remove duplicatas na lista de cidades.
+  // Remove duplicates from the list of cities.
   cities.unique();
 }

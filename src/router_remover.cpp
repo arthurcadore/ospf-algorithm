@@ -3,86 +3,84 @@
 void route_remover(unordered_map<string, list<Neighbor>> &map,
                    list<string> &cities_to_remove,
                    unordered_map<string, Table_Line> &distance_table) {
-  // Definindo as listas que serão utilizadas para armazenar os vizinhos da
-  // cidade alvo durante a checagem, para atualização do mapa.
+  // Define the lists that will be used to store the neighbors of the target city
+  // during the check, for updating the map.
 
-  // OBS: São utilizadas duas listas pois, é necessário que haja uma lista de
-  // retorno, como a tabela é simetrica, as rotas são espelhadas nas cidades.
+  // NOTE: Two lists are used because there needs to be a return list, as the table
+  // is symmetric, the routes are mirrored in the cities.
 
-  list<Neighbor> neighbours_return;
-  list<Neighbor> inverted_neighbours_return;
+  list<Neighbor> neighbors_return;
+  list<Neighbor> inverted_neighbors_return;
 
-  // define uma lista para armazenar as cidades espelhadas a verificar.
+  // Define a list to store the mirrored cities to check.
   list<string> inverted_cities_to_remove;
 
-  // define uma lista para armazenar as cidades a verificar dentro dos vizinhos
-  // da cidade espelhada.
+  // Define a list to store the cities to check within the neighbors of the
+  // mirrored city.
   list<string> previous_city;
 
-  // inicia um loop interando as listas de cidades da rota para verificação;
+  // Start a loop iterating over the route cities for verification;
   for (auto city_to_remove : cities_to_remove) {
-    // coleta a lista de vizinhos da determinada cidade.
-    list<Neighbor> list_of_neighbours = map[city_to_remove];
+    // Collect the list of neighbors of the given city.
+    list<Neighbor> list_of_neighbors = map[city_to_remove];
 
-    // valida se a lista de vizinhos possui mais de 2 valores.
-    // OBS: É necessário que a cidade tenha pelo menos duas conexões, por isso,
-    // a verificação.
-    if (list_of_neighbours.size() > 2) {
-      // coleta a proxima cidade apontada pela tabela até o destino.
+    // Check if the list of neighbors has more than 2 values.
+    // NOTE: It is necessary for the city to have at least two connections, hence
+    // the verification.
+    if (list_of_neighbors.size() > 2) {
+      // Collect the next city pointed by the table to the destination.
       string &next_city = distance_table[city_to_remove].next_city;
 
-      // adiciona as cidades espelhadas a lista para o processo contrário
-      // posteriormente
+      // Add the mirrored cities to the list for the reverse process later on
       inverted_cities_to_remove.push_back(next_city);
       previous_city.push_back(city_to_remove);
 
-      // intera a lista de vizinhos, copia todos os valores para uma lista
-      // separada.
-      for (auto i : list_of_neighbours) {
+      // Iterate over the list of neighbors, copy all values to a separate list.
+      for (auto i : list_of_neighbors) {
         if (next_city != i.name) {
-          neighbours_return.push_back(i);
+          neighbors_return.push_back(i);
         }
       }
-      // atualiza o valor do mapa correspondente a chave com a nova lista de
-      // vizinhos.
-      map[city_to_remove] = neighbours_return;
+      // Update the value in the map corresponding to the key with the new list of
+      // neighbors.
+      map[city_to_remove] = neighbors_return;
 
-      // limpa a lista de vizinhos para novo loop.
-      neighbours_return.clear();
+      // Clear the list of neighbors for the next loop.
+      neighbors_return.clear();
     }
   }
 
-  // intera lista de cidades coletadas no loop anterior para remoção das rotas
-  // simétricas.
+  // Iterate over the list of cities collected in the previous loop to remove the
+  // symmetric routes.
   while (!previous_city.empty()) {
-    // Cria duas variaveis auxiliares para facilitar a organização do código.
+    // Create two auxiliary variables to facilitate the organization of the code.
     string &key = inverted_cities_to_remove.front();
     string &value_to_remove = previous_city.front();
 
-    // procura no mapa a lista de vizihos correspondente a cidade espelhada.
-    list<Neighbor> &neighbours_to_remove = map[key];
+    // Find in the map the list of neighbors corresponding to the mirrored city.
+    list<Neighbor> &neighbors_to_remove = map[key];
 
-    // verifica o tamanho da lista, para garantir que possui mais de duas
-    // conexões (vizinhos)
-    if (neighbours_to_remove.size() > 2) {
-      // intera a lsita de vizinhos procurando copiando os valores que não
-      // correspondem a rota espelhada.
-      for (auto i : neighbours_to_remove) {
+    // Check the size of the list, to ensure it has more than two connections
+    // (neighbors)
+    if (neighbors_to_remove.size() > 2) {
+      // Iterate over the list of neighbors copying the values that do not
+      // correspond to the mirrored route.
+      for (auto i : neighbors_to_remove) {
         if (i.name != value_to_remove) {
-          // adiciona a rota a uma lista separada para atualização do mapa
-          inverted_neighbours_return.push_back(i);
+          // Add the route to a separate list for map update
+          inverted_neighbors_return.push_back(i);
         }
       }
 
-      // atualiza os valores do mapa da cidade espelhada retirando a rota
-      // simétrica.
-      map[key] = inverted_neighbours_return;
+      // Update the values in the map of the mirrored city removing the
+      // symmetric route.
+      map[key] = inverted_neighbors_return;
 
-      // limpa a lista de vizinhos para o proximo loop.
-      inverted_neighbours_return.clear();
+      // Clear the list of neighbors for the next loop.
+      inverted_neighbors_return.clear();
     }
 
-    // retira a cidade alvo/espelhada da lista para o proximo loop.
+    // Remove the target/mirrored city from the list for the next loop.
     inverted_cities_to_remove.pop_front();
     previous_city.pop_front();
   }

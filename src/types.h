@@ -19,4 +19,4 @@ struct Table_Line {
 
 #define INT_MAX 2147483647
 
-#endif  // TYPES_H
+#endif
